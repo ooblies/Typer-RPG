@@ -30,7 +30,7 @@ public class GlobalSkills : Singleton<GlobalSkills>
 
     public List<Skill> getRandomSkills()
     {
-        GenerateSkills();
+        //GenerateSkills();
 
         List<Skill> randomSkills = new List<Skill>();
 
@@ -62,7 +62,7 @@ public class GlobalSkills : Singleton<GlobalSkills>
 
     public Skill getSkillById(string skillId)
     {
-        GenerateSkills();
+        //GenerateSkills();
         try
         {            
             Skill skill = skills.Where(s => s.skillId == skillId).First();
