@@ -74,6 +74,8 @@ public class MenuButtonController : MonoBehaviour
             default:
                 break;
         }
+
+        Debug.Log("Difficulty set to - " + difficulty.options[difficulty.value].text);
     }
 
     public void nextMenu()
@@ -92,7 +94,7 @@ public class MenuButtonController : MonoBehaviour
 
 
                 setDifficulty();
-
+                Debug.Log("Character Menu");
                 break;
             case GlobalVars.Menu.Character:
                 if (GlobalVars.Instance.selectedSkills < 9)
@@ -102,7 +104,7 @@ public class MenuButtonController : MonoBehaviour
                 }
                 applySkills();
                 gc.LoadMenu(GlobalVars.Menu.Enemy);
-
+                Debug.Log("Enemy Menu");
                 break;
             case GlobalVars.Menu.Enemy:
                 if (GlobalVars.Instance.selectedEnemy == 0)
@@ -111,6 +113,7 @@ public class MenuButtonController : MonoBehaviour
                     return;
                 }
                 gc.LoadMenu(GlobalVars.Menu.Battle);
+                Debug.Log("Battle Scene");
                 break;
             case GlobalVars.Menu.Battle:
                 break;

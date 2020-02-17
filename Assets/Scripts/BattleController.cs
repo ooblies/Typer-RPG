@@ -48,6 +48,8 @@ public class BattleController : MonoBehaviour
         startTime = Time.time;
 
         ec.LoadEnemy();
+
+        Debug.Log("Battle Started");
     }
 
     public void EndBattle(bool win)
@@ -72,7 +74,9 @@ public class BattleController : MonoBehaviour
 
         endWPM.text = ((int)(GlobalVars.Instance.wordsTyped / (duration / 60))).ToString() + " wpm";
 
-        gc.LoadMenu(GlobalVars.Menu.GameOver);        
+        gc.LoadMenu(GlobalVars.Menu.GameOver);
+
+        Debug.Log("Battle Ended");
     }
 
     public void updateSkills()

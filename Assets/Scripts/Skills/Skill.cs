@@ -46,10 +46,10 @@ public class Skill : MonoBehaviour {
     #endregion
 
     public void onCast(string word, float startingX, float startingYMin, float startingYMax, GameObject prefab) {
-        //Debug.Log("Skill - Cast - " + skillName);
+        Debug.Log("Skill - Cast - " + skillName);
         //foreach num projectiles, create object with size etc
         if (wordHealSize > 0) {
-            //Debug.Log("Skill - Cast - " + skillName + " - Heal " + wordHealSize + " hp");
+            Debug.Log("Skill - Cast - " + skillName + " - Heal " + wordHealSize + " hp");
             GlobalVars.Instance.playerCurrentHealth += wordHealSize;
             if (GlobalVars.Instance.playerCurrentHealth > GlobalVars.Instance.playerMaxHealth) {
                 GlobalVars.Instance.playerCurrentHealth = GlobalVars.Instance.playerMaxHealth;

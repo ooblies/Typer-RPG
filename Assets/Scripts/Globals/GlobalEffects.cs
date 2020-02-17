@@ -271,7 +271,7 @@ public class GlobalEffects : Singleton<GlobalEffects>
                     }
                     
 
-                    //Debug.Log("Ongoing Effect - " + eff.sourceName + " - Deal " + eff.effect.ToString() + " damage");
+                    Debug.Log("Ongoing Effect - " + eff.sourceName + " - Deal " + eff.effect.ToString() + " damage");
                 }
                 if (eff.effectType == EffectType.HealOverTime)
                 {
@@ -284,7 +284,7 @@ public class GlobalEffects : Singleton<GlobalEffects>
                     {
                         GlobalVars.Instance.enemyCurrentHealth = Mathf.Clamp(GlobalVars.Instance.enemyCurrentHealth + eff.effect, 0, GlobalVars.Instance.enemyMaxHealth);                        
                     }
-                    //Debug.Log("Ongoing Effect - " + eff.sourceName + " - Heal " + eff.effect.ToString() + " hp");
+                    Debug.Log("Ongoing Effect - " + eff.sourceName + " - Heal " + eff.effect.ToString() + " hp");
                 }
             }
         }
