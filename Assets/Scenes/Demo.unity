@@ -5974,7 +5974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a53e86564d545be45a26fa9b03f1e797, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wordPath: Assets/Words/words.txt
+  wordPath: words.txt
   words: []
 --- !u!1 &1771188422
 GameObject:
