@@ -12,7 +12,7 @@ public class GlobalSkills : Singleton<GlobalSkills>
     {
         GenerateSkills();
 
-        Debug.Log("Generated Skills");
+        //Debug.Log("Generated Skills");
     }
 
     private void GenerateSkills()
@@ -367,7 +367,7 @@ public class GlobalSkills : Singleton<GlobalSkills>
 
     private void GenerateWarriorSkills()
     {
-        Debug.Log("Generating Warrior Skills");
+        //Debug.Log("Generating Warrior Skills");
 
         Skill TwoHandedAttack = new Skill
         {
@@ -462,7 +462,7 @@ public class GlobalSkills : Singleton<GlobalSkills>
     }
     private void GenerateMageSkills()
     {
-        Debug.Log("Generating Mage Skills");
+        //Debug.Log("Generating Mage Skills");
 
         Skill FireRain = new Skill
         {
@@ -568,7 +568,7 @@ public class GlobalSkills : Singleton<GlobalSkills>
     }
     private void GenerateRangerSkills()
     {
-        Debug.Log("Generating Ranger Skills");
+        //Debug.Log("Generating Ranger Skills");
         Skill Shoot = new Skill
         {
             orderBy = 11,
@@ -656,7 +656,7 @@ public class GlobalSkills : Singleton<GlobalSkills>
     }
     private void GenerateClericSkills()
     {
-        Debug.Log("Generating Cleric Skills");
+        //Debug.Log("Generating Cleric Skills");
         Skill BigHeal = new Skill
         {
             orderBy = 16,
@@ -736,7 +736,7 @@ public class GlobalSkills : Singleton<GlobalSkills>
     }
     private void GenerateBardSkills()
     {
-        Debug.Log("Generating Bard Skills");
+        //Debug.Log("Generating Bard Skills");
         Skill HasteningMelody = new Skill
         {
             orderBy = 21,

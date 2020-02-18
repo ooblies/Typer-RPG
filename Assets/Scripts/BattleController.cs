@@ -49,7 +49,8 @@ public class BattleController : MonoBehaviour
 
         ec.LoadEnemy();
 
-        Debug.Log("Battle Started");
+        //Debug.Log("Battle Started");
+        Debug.Log(string.Join(",",selectedSkillIds.ToArray()));
     }
 
     public void EndBattle(bool win)
@@ -76,7 +77,7 @@ public class BattleController : MonoBehaviour
 
         gc.LoadMenu(GlobalVars.Menu.GameOver);
 
-        Debug.Log("Battle Ended");
+        //Debug.Log("Battle Ended");
     }
 
     public void updateSkills()

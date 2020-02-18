@@ -31,13 +31,13 @@ public class GlobalWords : Singleton<GlobalWords>
 
             //result = www.text;
             words = www.text.Split(new[] { "\r\n", "\r", "\n" }, System.StringSplitOptions.None).ToList();
-            Debug.Log("words loaded remotely - " + filePath);
+            //Debug.Log("words loaded remotely - " + filePath);
         }
         else
         {
             //result = System.IO.File.ReadAllText(filePath);
             words = File.ReadAllLines("Assets/Words/" + wordPath).ToList();
-            Debug.Log("words loaded locally - " + "Assets/Words/" + wordPath);
+            //Debug.Log("words loaded locally - " + "Assets/Words/" + wordPath);
         }
 
         findMaxLength();
