@@ -14,6 +14,7 @@ public class SkillButtonController : MonoBehaviour
     private BattleController bc;
     public Text txt;
     private string originalText;
+    public Text debug;
     
 
     public Image icon;
@@ -52,6 +53,8 @@ public class SkillButtonController : MonoBehaviour
             Vector2 vec2 = new Vector2(0.5f, 0.5f);
 
             icon.sprite = Sprite.Create(text, rect, vec2, 32);
+
+            debug.text = skillId;
         }        
     }
 

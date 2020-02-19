@@ -99,6 +99,49 @@ public class Skill : MonoBehaviour {
                 theText.text += " - x" + newSkill.damageMultiplier;
             }
 
+            //status Icon
+            SpriteRenderer icon = projectile.GetComponentInChildren<SpriteRenderer>();
+
+            if (effectType == GlobalEffects.EffectType.DamageOverTime || effectType == GlobalEffects.EffectType.Freeze)
+            {
+                icon.enabled = true;
+
+                string path = "Icons/";
+                
+                if (new List<string>() {"witchPoison","ratDisease"}.Contains(skillId))
+                {
+                    icon.color = Color.green;
+                    path += "poison";
+                }
+                if (new List<string>() { "mageFireRain", "mageFireball" }.Contains(skillId))
+                {
+                    icon.color = Color.red;
+                    path += "burn";
+                }                
+                if (new List<string>() { "giantEarthquake","knightShieldBash","rangerSnare" }.Contains(skillId))
+                {
+                    icon.color = Color.yellow;
+                    path += "stun";
+                }
+
+                Texture2D text = Resources.Load<Texture2D>(path);
+
+                if (text == null)
+                {
+                    //missing icon
+                    text = Resources.Load<Texture2D>("Icons/temp");
+                }
+
+                Rect rect = new Rect(0.0f, 0.0f, text.width, text.height);
+                Vector2 vec2 = new Vector2(0.5f, 0.5f);
+
+                icon.sprite = Sprite.Create(text, rect, vec2, 32);
+            }
+            else
+            {
+                icon.enabled = false;
+            }
+
             createdProjectiles.Add(projectile);
         }        
 

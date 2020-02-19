@@ -637,7 +637,7 @@ public class GlobalSkills : Singleton<GlobalSkills>
             job = Job.Ranger,
             skillType = SkillType.Effect,
             skillName = "Snare",
-            description = "Catch the enemy in a snare, freezing their attacks",
+            description = "Catch the enemy in a snare, stunning them temporarily",
            
             wordCostSize = 6,
             cooldown = 15,

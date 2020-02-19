@@ -108,6 +108,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -461,7 +463,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: d2246fd035753663134801a7c854b514
+      Hash: 83f6a938ed2bea12501c7916b1b30645
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SkillButtonController
