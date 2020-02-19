@@ -19,10 +19,10 @@ public class GlobalWords : Singleton<GlobalWords>
     {
         dataPath = Application.dataPath;
         //WebGL
-        //StartCoroutine(loadWords());
+        StartCoroutine(loadWords());
 
         //Windows
-        loadWordsWindows();
+        //loadWordsWindows();
 
         findMaxLength();
     }
@@ -43,7 +43,7 @@ public class GlobalWords : Singleton<GlobalWords>
         yield return www;
         
         words = www.text.Split(new[] { "\r\n", "\r", "\n" }, System.StringSplitOptions.None).ToList();
-        Debug.Log(words.Count().ToString() + "words loaded remotely - " + filePath);
+        Debug.Log(words.Count().ToString() + " words loaded remotely - " + filePath);
     }
 
     private void findMaxLength()
