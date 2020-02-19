@@ -19,10 +19,10 @@ public class GlobalWords : Singleton<GlobalWords>
     {
         dataPath = Application.dataPath;
         //WebGL
-        StartCoroutine(loadWords());
+        //StartCoroutine(loadWords());
 
         //Windows
-        //loadWordsWindows();
+        loadWordsWindows();
 
         findMaxLength();
     }
