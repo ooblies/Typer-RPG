@@ -23,8 +23,6 @@ public class GlobalWords : Singleton<GlobalWords>
 
         //Windows
         //loadWordsWindows();
-
-        findMaxLength();
     }
 
     private void loadWordsWindows()
@@ -32,6 +30,8 @@ public class GlobalWords : Singleton<GlobalWords>
         string filePath = System.IO.Path.Combine(Application.dataPath, fileName);
         words = File.ReadAllLines(filePath).ToList();
         Debug.Log(words.Count().ToString() + " words loaded locally - " + filePath);
+
+        findMaxLength();
     }
 
     private IEnumerator loadWords()
@@ -44,6 +44,8 @@ public class GlobalWords : Singleton<GlobalWords>
         
         words = www.text.Split(new[] { "\r\n", "\r", "\n" }, System.StringSplitOptions.None).ToList();
         Debug.Log(words.Count().ToString() + " words loaded remotely - " + filePath);
+
+        findMaxLength();
     }
 
     private void findMaxLength()
