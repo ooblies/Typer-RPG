@@ -31,7 +31,7 @@ public class GlobalWords : Singleton<GlobalWords>
     {
         string filePath = System.IO.Path.Combine(Application.dataPath, fileName);
         words = File.ReadAllLines(filePath).ToList();
-        //Debug.Log("words loaded locally - " + filePath);
+        Debug.Log(words.Count().ToString() + " words loaded locally - " + filePath);
     }
 
     private IEnumerator loadWords()
@@ -43,7 +43,7 @@ public class GlobalWords : Singleton<GlobalWords>
         yield return www;
         
         words = www.text.Split(new[] { "\r\n", "\r", "\n" }, System.StringSplitOptions.None).ToList();
-        //Debug.Log("words loaded remotely - " + filePath);
+        Debug.Log(words.Count().ToString() + "words loaded remotely - " + filePath);
     }
 
     private void findMaxLength()
