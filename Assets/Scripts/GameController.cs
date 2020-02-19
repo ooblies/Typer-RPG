@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
 
         LoadMenu(GlobalVars.Menu.Start);
 
-        Debug.Log("Version - 0.9.0");
+        Debug.Log("Version - 1.0");
 
     }
     private void Awake()

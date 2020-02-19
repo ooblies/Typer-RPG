@@ -46,10 +46,10 @@ public class Skill : MonoBehaviour {
     #endregion
 
     public void onCast(string word, float startingX, float startingYMin, float startingYMax, GameObject prefab) {
-        //Debug.Log("Skill - Cast - " + skillName);
+        ////Debug.Log("Skill - Cast - " + skillName);
         //foreach num projectiles, create object with size etc
         if (wordHealSize > 0) {
-            //Debug.Log("Skill - Cast - " + skillName + " - Heal " + wordHealSize + " hp");
+            ////Debug.Log("Skill - Cast - " + skillName + " - Heal " + wordHealSize + " hp");
             GlobalVars.Instance.playerCurrentHealth += wordHealSize;
             if (GlobalVars.Instance.playerCurrentHealth > GlobalVars.Instance.playerMaxHealth) {
                 GlobalVars.Instance.playerCurrentHealth = GlobalVars.Instance.playerMaxHealth;
@@ -203,7 +203,7 @@ public class Skill : MonoBehaviour {
 
         if (GlobalEffects.Instance.applyWordBlock(job > 0 ? GlobalEffects.EffectTarget.Enemy : GlobalEffects.EffectTarget.Friendly))
         {
-            //Debug.Log("Skill - Block - " + skillName);
+            ////Debug.Log("Skill - Block - " + skillName);
             return;
         }
 
@@ -212,7 +212,7 @@ public class Skill : MonoBehaviour {
 
         if (lBlock > 0)
         {
-            //Debug.Log("Skill - Block - " + skillName + " - Blocked " + lBlock.ToString() + " of " + size.ToString() + " letters");
+            ////Debug.Log("Skill - Block - " + skillName + " - Blocked " + lBlock.ToString() + " of " + size.ToString() + " letters");
         }
 
         if (lBlock < size)
@@ -224,7 +224,7 @@ public class Skill : MonoBehaviour {
             {
                 GlobalVars.Instance.enemyCurrentHealth -= (int)damage;
 
-                //Debug.Log("Skill - Hit - " + skillName + " - Deal " + ((int)damage).ToString() + " damage");
+                ////Debug.Log("Skill - Hit - " + skillName + " - Deal " + ((int)damage).ToString() + " damage");
 
                 if (applyEffectOnHit)
                 {
@@ -235,7 +235,7 @@ public class Skill : MonoBehaviour {
             {
                 GlobalVars.Instance.playerCurrentHealth -= (int)damage;
 
-                //Debug.Log("Skill - Hit - " + skillName + " - Deal " + ((int)damage).ToString() + " damage");
+                ////Debug.Log("Skill - Hit - " + skillName + " - Deal " + ((int)damage).ToString() + " damage");
 
                 if (applyEffectOnHit)
                 {

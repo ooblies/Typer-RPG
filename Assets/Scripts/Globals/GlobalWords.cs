@@ -9,38 +9,41 @@ using UnityEngine.UI;
 public class GlobalWords : Singleton<GlobalWords>
 {
 
-    public string wordPath = "words.txt";
+    public string fileName = "words.txt";
+    private string dataPath = "";
     private int maxLength = 0;
 
     public List<string> words = new List<string>();
     
     private void Awake()
     {
-        StartCoroutine(loadWords());
-        
+        dataPath = Application.dataPath;
+        //WebGL
+        //StartCoroutine(loadWords());
+
+        //Windows
+        loadWordsWindows();
+
+        findMaxLength();
+    }
+
+    private void loadWordsWindows()
+    {
+        string filePath = System.IO.Path.Combine(Application.dataPath, fileName);
+        words = File.ReadAllLines(filePath).ToList();
+        //Debug.Log("words loaded locally - " + filePath);
     }
 
     private IEnumerator loadWords()
     {
-        string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, wordPath);
-
-        if (filePath.Contains("://") || filePath.Contains(":///"))
-        {
-            WWW www = new WWW(filePath);
-            yield return www;
-
-            //result = www.text;
-            words = www.text.Split(new[] { "\r\n", "\r", "\n" }, System.StringSplitOptions.None).ToList();
-            //Debug.Log("words loaded remotely - " + filePath);
-        }
-        else
-        {
-            //result = System.IO.File.ReadAllText(filePath);
-            words = File.ReadAllLines("Assets/Words/" + wordPath).ToList();
-            //Debug.Log("words loaded locally - " + "Assets/Words/" + wordPath);
-        }
-
-        findMaxLength();
+        string filePath = System.IO.Path.Combine(Application.streamingAssetsPath, fileName);
+        
+        //WebGL
+        WWW www = new WWW(filePath);
+        yield return www;
+        
+        words = www.text.Split(new[] { "\r\n", "\r", "\n" }, System.StringSplitOptions.None).ToList();
+        //Debug.Log("words loaded remotely - " + filePath);
     }
 
     private void findMaxLength()

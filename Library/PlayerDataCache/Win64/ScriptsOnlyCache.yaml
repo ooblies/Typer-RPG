@@ -108,6 +108,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 222
@@ -323,7 +325,7 @@ ScriptsOnlyBuild:
     className: GlobalVars
   - hash:
       serializedVersion: 2
-      Hash: 6c697fc838381d393616345e4fc51161
+      Hash: 7d823be2c415f8eea69710c5592b760a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GlobalWords
@@ -461,7 +463,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: d2246fd035753663134801a7c854b514
+      Hash: 83f6a938ed2bea12501c7916b1b30645
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SkillButtonController
@@ -606,4 +608,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Demo.unity
-  playerPath: D:/Projects/Unity/Typer RPG/Builds/Windows/Typer RPG.exe
+  playerPath: D:/Projects/Unity/Typer RPG/Builds/Windows_x64/Typer RPG.exe

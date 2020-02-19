@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -49,8 +50,8 @@ public class BattleController : MonoBehaviour
 
         ec.LoadEnemy();
 
-        //Debug.Log("Battle Started");
-        Debug.Log(string.Join(",",selectedSkillIds.ToArray()));
+        ////Debug.Log("Battle Started");
+        //Debug.Log("Battle start - " + string.Join(",",selectedSkillIds.ToArray()));
     }
 
     public void EndBattle(bool win)
@@ -77,7 +78,7 @@ public class BattleController : MonoBehaviour
 
         gc.LoadMenu(GlobalVars.Menu.GameOver);
 
-        //Debug.Log("Battle Ended");
+        ////Debug.Log("Battle Ended");
     }
 
     public void updateSkills()
@@ -85,7 +86,7 @@ public class BattleController : MonoBehaviour
         int i = 0;
 
         GameObject[] skillButtons = GameObject.FindGameObjectsWithTag("SkillButton");
-        foreach (GameObject go in skillButtons)
+        foreach (GameObject go in skillButtons.OrderByDescending(b => b.transform.position.y))
         {
             SkillButtonController sbc = go.GetComponent<SkillButtonController>();
             

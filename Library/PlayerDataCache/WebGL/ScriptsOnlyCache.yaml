@@ -325,7 +325,7 @@ ScriptsOnlyBuild:
     className: GlobalVars
   - hash:
       serializedVersion: 2
-      Hash: 6c697fc838381d393616345e4fc51161
+      Hash: 7d823be2c415f8eea69710c5592b760a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GlobalWords

@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\SkillPaneController.cs" />
     <Compile Include="Assets\Scripts\Skills\Skill.cs" />
     <None Include="Assets\Words\words.txt" />
+    <None Include="Assets\words.txt" />
     <None Include="Assets\Words\words-guten.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Projects/Unity/Typer RPG/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
